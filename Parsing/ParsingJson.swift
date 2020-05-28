@@ -30,6 +30,7 @@ class Json {
             //self.convertInArray(jsonObject)
             self.parsing(self.convertInArray(jsonObject))
             
+            
         }
         dataTask.resume()
     }
@@ -41,8 +42,13 @@ class Json {
     }
     
     func parsing(_ array: [Any]) {
-
-            
+        var new: Dictionary<String, Any>?
+        for i in array {
+            let ii = i as! Dictionary<String, Any>
+            new = ii
+            print(new!.keys.count)
+        }
+        
 
     }
 }
