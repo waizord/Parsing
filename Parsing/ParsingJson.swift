@@ -12,15 +12,19 @@ struct ParsingJson {
     
     func parse() {
         let url = URL(string: "http://q11.jvmhost.net/vmc_json")
-        let session = URLSession(configuration: .default)
-        
-        let downloadTask = session.downloadTask(with: url!)
-        let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] + "data.json"
-        let urlPath = URL(fileURLWithPath: path)
-        print(urlPath)
-        
-        downloadTask.resume()
-        
+        let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) {
+            (data, response, error) -> Void in
+            guard error == nil,
+                let responseData = data,
+                let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) else {
+                //handle error if needed
+                return
+            }
+            //handle object
+            print(jsonObject)
+        }
+        dataTask.resume()
     }
 }
 
