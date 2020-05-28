@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let parsing = ParsingJson()
+    let json = Json()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        parsing.parse()
+        json.parse()
+        
     }
 
 

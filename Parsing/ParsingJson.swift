@@ -8,13 +8,17 @@
 
 import Foundation
 
-struct ParsingJson {
+class Json {
     
+    
+
+    // Creat json object
     func parse() {
+        
         let url = URL(string: "http://q11.jvmhost.net/vmc_json")
         let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) {
-            (data, response, error) -> Void in
+            (data, response, error) in
             guard error == nil,
                 let responseData = data,
                 let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) else {
@@ -22,9 +26,24 @@ struct ParsingJson {
                 return
             }
             //handle object
-            print(jsonObject)
+            //print(jsonObject)
+            //self.convertInArray(jsonObject)
+            self.parsing(self.convertInArray(jsonObject))
+            
         }
         dataTask.resume()
+    }
+    func convertInArray(_ jsonObject: Any) -> [Any]{
+        let json = jsonObject as! [Any]
+        //print(json.count)
+        return json
+        
+    }
+    
+    func parsing(_ array: [Any]) {
+
+            
+
     }
 }
 
