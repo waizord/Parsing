@@ -46,7 +46,9 @@ class Json {
         for i in array {
             let ii = i as! Dictionary<String, Any>
             new = ii
-            print(new!.keys.count)
+            
+            
+            print(new!.keys)
         }
         
 

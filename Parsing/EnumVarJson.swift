@@ -7,53 +7,53 @@
 //
 
 /*import Foundation
-enum do {
+enum {
     case axiscount
     case cncsystem
     case cncsystemfull
     case country
     case countryru
     case id
-    info1en = text;
-    info2ru = text;
-    machinecondition = new;
-    machineconditionru = text;
-    machinelocation = China;
-    machinelocationru = text;
-    machineruntime = 0;
-    manufacturer = "China Corp.";
-    model = VMC650;
-    modelurl = text;
-    photo = "DMU_40_eVo_1.jpg";
-    photoVmcList =         (
-    );
-    positioningaccuracy = text;
-    price = 0;
-    productid = 030242;
-    sold = text;
-    spindlenose = BT40;
-    spindlepower = 0;
-    spindleruntime = 0;
-    spindlespeed = 8000;
-    tablerectangleload = 450;
-    tableroundload = 0;
-    tableroundsize = 0;
-    toolchangingchiptochip = 0;
-    toolchangingtooltotool = 0;
-    toolcount = 16;
-    toolmaxdiameter = 0;
-    toolmaxlength = 0;
-    toolmaxweight = 0;
-    type = "CNC Milling machine";
-    typeru = text;
-    typeurl = text;
-    video1 = "http://vtechno.by/uploads/product/100/150/vmc-012-VMC650_2019-03-13_14-56-48.jpg";
-    video2 = text;
-    x = 650;
-    xtable = 800;
-    y = 400;
-    year = 2000;
-    year1 = 2000;
-    ytable = 400;
-    z = 500;
-}*/
+    case info1en = text
+    case info2ru = text
+    case machinecondition = new
+    case machineconditionru = text
+    case machinelocation = China
+    case machinelocationru = text
+    case machineruntime = 0
+    case manufacturer = "China Corp."
+    case model = VMC650
+    case modelurl = text
+    case photo = "DMU_40_eVo_1.jpg"
+    case photoVmcList
+    case positioningaccuracy = text
+    case price = 0
+    case productid = 030242
+    case sold = text
+    case spindlenose = BT40
+    case spindlepower = 0
+    case spindleruntime = 0
+    case spindlespeed = 8000
+    case tablerectangleload = 450
+    case tableroundload = 0
+    case tableroundsize = 0
+    case toolchangingchiptochip = 0
+    case toolchangingtooltotool = 0
+    case toolcount = 16
+    case toolmaxdiameter = 0
+    case toolmaxlength = 0
+    case toolmaxweight = 0
+    case type = "CNC Milling machine"
+    case typeru = text
+    case typeurl = text
+    case video1 = "http://vtechno.by/uploads/product/100/150/vmc-012-VMC650_2019-03-13_14-56-48.jpg"
+    case video2 = text
+    case x = 650
+    case xtable = 800
+    case y
+    case year
+    case year1
+    case ytable
+    case z
+}
+*/
