@@ -9,11 +9,8 @@
 import Foundation
 
 class Json {
-    
-    
-
     // Creat json object
-    func parse() {
+    func parsing() {
         
         let url = URL(string: "http://q11.jvmhost.net/vmc_json")
         let urlRequest = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -27,31 +24,24 @@ class Json {
             }
             //handle object
             //print(jsonObject)
-            //self.convertInArray(jsonObject)
-            self.parsing(self.convertInArray(jsonObject))
-            
-            
+            // print json to console
+            self.convertInArray(jsonObject)
         }
         dataTask.resume()
     }
-    func convertInArray(_ jsonObject: Any) -> [Any]{
-        let json = jsonObject as! [Any]
-        //print(json.count)
+    
+    func convertInArray(_ jsonObject: Any) -> [Dictionary<String, Any>] {
+        let json = jsonObject as! [Dictionary<String, Any>]
+        //checking json keys
+        for dict in json {
+
+            //print(dict.keys)
+        }
         return json
-        
     }
     
-    func parsing(_ array: [Any]) {
-        var new: Dictionary<String, Any>?
-        for i in array {
-            let ii = i as! Dictionary<String, Any>
-            new = ii
-            
-            
-            print(new!.keys)
-        }
         
 
-    }
+    
 }
 
