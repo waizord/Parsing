@@ -34,14 +34,9 @@ class Json {
         let json = jsonObject as! [Dictionary<String, Any>]
         //checking json keys
         for dict in json {
-            
-            //print(JsonKeys.id)
+            print(dict["video1"]!)
         }
         return json
     }
-    
-        
-
-    
 }
 

@@ -53,6 +53,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="230"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="T0u-Ai-a7N" id="ssa-EU-zrJ"/>
+                                            <outlet property="nameLabel" destination="bCF-tE-xhY" id="tFh-T1-o6f"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -68,6 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="uuJ-kp-fan"/>
                     <connections>
+                        <outlet property="collectionView" destination="MFC-ui-MGm" id="xUO-rZ-TsO"/>
                         <segue destination="7uB-ts-N2p" kind="show" identifier="ShowVC" id="Ykc-Ft-Nqm"/>
                     </connections>
                 </viewController>
