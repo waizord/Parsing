@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44A475C248A3F700065E0E1 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A475B248A3F700065E0E1 /* MenuCollectionViewCell.swift */; };
 		A47FB0DE247F1FF7009ED792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB0DD247F1FF7009ED792 /* AppDelegate.swift */; };
 		A47FB0E0247F1FF7009ED792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB0DF247F1FF7009ED792 /* SceneDelegate.swift */; };
 		A47FB0E2247F1FF7009ED792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FB0E1247F1FF7009ED792 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A44A475B248A3F700065E0E1 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		A47FB0DA247F1FF7009ED792 /* Parsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47FB0DD247F1FF7009ED792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47FB0DF247F1FF7009ED792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				A47FB0F1247F2011009ED792 /* Json.swift */,
 				A48320D1247FFC9A005EF278 /* JsonKeys.swift */,
 				A48320CF247FF639005EF278 /* Data.json */,
+				A44A475B248A3F700065E0E1 /* MenuCollectionViewCell.swift */,
 			);
 			path = Parsing;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				A47FB0DE247F1FF7009ED792 /* AppDelegate.swift in Sources */,
 				A47FB0F2247F2011009ED792 /* Json.swift in Sources */,
 				A47FB0E0247F1FF7009ED792 /* SceneDelegate.swift in Sources */,
+				A44A475C248A3F700065E0E1 /* MenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
