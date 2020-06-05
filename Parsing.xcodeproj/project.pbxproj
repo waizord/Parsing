@@ -83,8 +83,8 @@
 				A44A475F248A4D010065E0E1 /* Menu.swift */,
 				A44A4763248A81E90065E0E1 /* Json */,
 				A47FB0E3247F1FF7009ED792 /* Main.storyboard */,
-				A47FB0E6247F1FF8009ED792 /* Assets.xcassets */,
 				A47FB0E8247F1FF8009ED792 /* LaunchScreen.storyboard */,
+				A47FB0E6247F1FF8009ED792 /* Assets.xcassets */,
 				A47FB0EB247F1FF8009ED792 /* Info.plist */,
 			);
 			path = Parsing;
