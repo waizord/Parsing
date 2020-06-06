@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     let json = Json()
+    
     let identifire = "menuCell"
+    let segue = "showVC"
+    
     var imageMenuArray: [Menu] = {
         var blankMenu = Menu()
         blankMenu.name = "STATERS"
@@ -21,23 +24,29 @@ class ViewController: UIViewController {
         blankMenu.imageName = "STR"
         return [blankMenu, blankMenu1]
     }()
-    
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         json.parsing()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
-        
+    }
+    // to get elemets viewController -> detailViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVC" {
+            if let vc = segue.destination as? DetailViewController {
+                let menu = sender as? Menu
+                print(menu ?? "nil")
+                vc.menu = menu
+            }
+        }
     }
     
-    
 }
+
+// MARK: Extension
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,12 +59,19 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             
             return itemCell
         }
-        
         return MenuCollectionViewCell()
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = (view.frame.width - 20)/3
-//        return CGSize(width: width, height: width)
-//    }
+    
+    // choice size image
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width - 50
+        return CGSize(width: width, height: width)
+    }
+    
+    // didSelected
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let menu = imageMenuArray[indexPath.row]
+        self.performSegue(withIdentifier: segue, sender: menu)
+    }
     
 }
