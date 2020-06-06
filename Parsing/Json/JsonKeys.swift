@@ -58,7 +58,6 @@ struct JsonKeys {
     var year1: String
     var ytable: String
     var z: String
-    
 
 }
 

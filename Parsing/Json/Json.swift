@@ -9,6 +9,14 @@
 import Foundation
 
 class Json {
+    
+    //usebility elements for that menu
+    var spindlenose = [String]()
+    var manufacturer = [String]()
+    var type = [String]()
+    var machinelocation = [String]()
+    var video1 = [String]()
+    
     // Creat json object
     func parsing() {
         
@@ -18,25 +26,40 @@ class Json {
             (data, response, error) in
             guard error == nil,
                 let responseData = data,
-                let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) else {
-                //handle error if needed
-                return
+                let jsonObject = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [Dictionary<String, Any>]
+                else {
+                    //handle error if needed
+                    return
             }
             //handle object
             //print(jsonObject)
             // print json to console
-            self.convertInArray(jsonObject)
+            self.addingInArrays(jsonObject)
         }
         dataTask.resume()
     }
     
-    func convertInArray(_ jsonObject: Any) -> [Dictionary<String, Any>] {
-        let json = jsonObject as! [Dictionary<String, Any>]
-        //checking json keys
-        for dict in json {
-            print(dict["video1"]!)
+    func addingInArrays(_ jsonObject: [Dictionary<String, Any>]) {
+
+        for dict in jsonObject {
+            
+            if let spindlenose = dict["spindlenose"] as? String {
+                self.spindlenose.append(spindlenose)
+            }else {return}
+            if let manufacturer = dict["manufacturer"] as? String {
+                self.manufacturer.append(manufacturer)
+            }else{return}
+            if let type = dict["type"] as? String {
+                self.type.append(type)
+            }else{return}
+            if let machinelocation = dict["machinelocation"] as? String {
+                self.machinelocation.append(machinelocation)
+            }
+            if let video1 = dict["video1"] as? String {
+                self.video1.append(video1)
+            }
+            
         }
-        return json
     }
 }
 

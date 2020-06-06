@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         var blankMenu = Menu()
         blankMenu.name = "STATERS"
         blankMenu.imageName = "STR"
-        
+
         var blankMenu1 = Menu()
         blankMenu.name = "STATER"
         blankMenu.imageName = "STR"
@@ -32,13 +32,19 @@ class ViewController: UIViewController {
         json.parsing()
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        
     }
+    
     // to get elemets viewController -> detailViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVC" {
             if let vc = segue.destination as? DetailViewController {
                 let menu = sender as? Menu
+                
+                // test print
                 print(menu ?? "nil")
+                
                 vc.menu = menu
             }
         }
