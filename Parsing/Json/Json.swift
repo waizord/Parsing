@@ -58,7 +58,8 @@ class Json {
             if let video1 = dict["video1"] as? String {
                 self.video1.append(video1)
             }
-            
+            //check array
+            print(spindlenose.count, machinelocation.count, type.count, manufacturer.count, video1.count)
         }
     }
 }
