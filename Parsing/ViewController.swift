@@ -17,22 +17,30 @@ class ViewController: UIViewController {
     var imageMenuArray: [Menu] = {
         var blankMenu = Menu()
         blankMenu.name = "STATERS"
-        blankMenu.imageName = "STR"
+        blankMenu.imageName = "STR-1"
 
         var blankMenu1 = Menu()
         blankMenu.name = "STATER"
         blankMenu.imageName = "STR"
-        return [blankMenu, blankMenu1]
+        
+        var blankMenu2 = Menu()
+        blankMenu.name = "STATEasdasda"
+        blankMenu.imageName = "STR"
+        return [blankMenu, blankMenu1, blankMenu2]
     }()
 
+
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var namelanel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         json.parsing()
         collectionView.dataSource = self
         collectionView.delegate = self
-
+       // fixImageFromUrl()
+        
         
     }
     
@@ -40,7 +48,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVC" {
             if let vc = segue.destination as? DetailViewController {
-                let menu = sender as? Menu
+                let menu = sender as! Menu
                 
                 // test print
                 print(menu ?? "nil")
@@ -49,6 +57,20 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+//    func fixImageFromUrl(){
+//        for one in json.video1 {
+//            if let url = URL(string: one){
+//                if let data = try? Data(contentsOf: url) {
+//                    self.imageMenuArray.append(.init(name:"rr", imageName: data))
+//                    print(imageMenuArray)
+//                }
+//            }
+//
+//        }
+//    }
+    
+
     
 }
 

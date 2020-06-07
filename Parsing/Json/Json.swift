@@ -11,11 +11,13 @@ import Foundation
 class Json {
     
     //usebility elements for that menu
-    var spindlenose = [String]()
+    var id = [String]()
     var manufacturer = [String]()
     var type = [String]()
     var machinelocation = [String]()
     var video1 = [String]()
+    
+    
     
     // Creat json object
     func parsing() {
@@ -42,24 +44,23 @@ class Json {
     func addingInArrays(_ jsonObject: [Dictionary<String, Any>]) {
 
         for dict in jsonObject {
-            
-            if let spindlenose = dict["spindlenose"] as? String {
-                self.spindlenose.append(spindlenose)
-            }else {return}
-            if let manufacturer = dict["manufacturer"] as? String {
-                self.manufacturer.append(manufacturer)
-            }else{return}
-            if let type = dict["type"] as? String {
-                self.type.append(type)
-            }else{return}
-            if let machinelocation = dict["machinelocation"] as? String {
-                self.machinelocation.append(machinelocation)
+            if let id = dict["id"] {
+                self.id.append(String(id as! Int) )
             }
-            if let video1 = dict["video1"] as? String {
-                self.video1.append(video1)
+            if let manufacturer = dict["manufacturer"] {
+                self.manufacturer.append(manufacturer as! String)
+            }
+            if let type = dict["type"] {
+                self.type.append(type as! String)
+            }
+            if let machinelocation = dict["machinelocation"] {
+                self.machinelocation.append(machinelocation as! String)
+            }
+            if let urlImage = dict["video1"] {
+                self.video1.append(urlImage as! String)
             }
             //check array
-            print(spindlenose.count, machinelocation.count, type.count, manufacturer.count, video1.count)
+            //print(id, manufacturer, type, machinelocation, video1)
         }
     }
 }
