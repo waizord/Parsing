@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVC" {
             if let vc = segue.destination as? DetailViewController {
-                let menu = sender as! Menu
+                let menu = sender as? Menu
                 
                 // test print
                 print(menu ?? "nil")
