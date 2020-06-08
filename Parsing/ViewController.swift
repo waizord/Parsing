@@ -14,36 +14,39 @@ class ViewController: UIViewController {
     let identifire = "menuCell"
     let segue = "showVC"
     
-    var imageMenuArray: [Menu] = {
-        var blankMenu = Menu()
-        blankMenu.name = "STATERS"
-        blankMenu.imageName = "STR-1"
+        var imageMenuArray: [Menu] = {
+            var blankMenu = Menu()
+            var blankMenu1 = Menu()
+            var blankMenu2 = Menu()
+            blankMenu.name = "STATERS"
+            blankMenu.imageName = "STR-1"
+    
 
-        var blankMenu1 = Menu()
-        blankMenu.name = "STATER"
-        blankMenu.imageName = "STR"
-        
-        var blankMenu2 = Menu()
-        blankMenu.name = "STATEasdasda"
-        blankMenu.imageName = "STR"
-        return [blankMenu, blankMenu1, blankMenu2]
-    }()
+            blankMenu1.name = "STATER"
+            blankMenu1.imageName = "STR"
+    
 
-
+            blankMenu2.name = "STATEasdasda"
+            blankMenu2.imageName = "STR"
+            return [blankMenu, blankMenu1, blankMenu2]
+        }()
+    //var imageMenuArray = [Menu]()
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var namelanel: UILabel!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         json.parsing()
         collectionView.dataSource = self
         collectionView.delegate = self
-       // fixImageFromUrl()
-        
-        
+        // fixImageFromUrl()
     }
     
+
     // to get elemets viewController -> detailViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVC" {
@@ -58,19 +61,19 @@ class ViewController: UIViewController {
         }
     }
     
-//    func fixImageFromUrl(){
-//        for one in json.video1 {
-//            if let url = URL(string: one){
-//                if let data = try? Data(contentsOf: url) {
-//                    self.imageMenuArray.append(.init(name:"rr", imageName: data))
-//                    print(imageMenuArray)
-//                }
-//            }
-//
-//        }
-//    }
+    //    func fixImageFromUrl(){
+    //        for one in json.video1 {
+    //            if let url = URL(string: one){
+    //                if let data = try? Data(contentsOf: url) {
+    //                    self.imageMenuArray.append(.init(name:"rr", imageName: data))
+    //                    print(imageMenuArray)
+    //                }
+    //            }
+    //
+    //        }
+    //    }
     
-
+    
     
 }
 
@@ -82,6 +85,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifire, for: indexPath) as? MenuCollectionViewCell {
             itemCell.menu = imageMenuArray[indexPath.row]
             

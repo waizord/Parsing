@@ -10,6 +10,7 @@ import Foundation
 
 class Json {
     
+    var jsonObject = [Dictionary<String, Any>]()
     //usebility elements for that menu
     var id = [String]()
     var manufacturer = [String]()
@@ -36,14 +37,16 @@ class Json {
             //handle object
             //print(jsonObject)
             // print json to console
-            self.addingInArrays(jsonObject)
+            //self.addingInToArrays(jsonObject)
+            self.jsonObject = jsonObject
+            self.addingInToArrays()
         }
         dataTask.resume()
     }
     
-    func addingInArrays(_ jsonObject: [Dictionary<String, Any>]) {
+    func addingInToArrays() {
 
-        for dict in jsonObject {
+        for dict in self.jsonObject {
             if let id = dict["id"] {
                 self.id.append(String(id as! Int) )
             }
@@ -60,7 +63,7 @@ class Json {
                 self.video1.append(urlImage as! String)
             }
             //check array
-            //print(id, manufacturer, type, machinelocation, video1)
+            print(id, manufacturer, type, machinelocation, video1)
         }
     }
 }
