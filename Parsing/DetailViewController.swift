@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             guard let image = menu?.imageName else {return}
-            imageView.image = UIImage(named: image)
+            imageView.image = UIImage(data: image)
         }
     }
     
