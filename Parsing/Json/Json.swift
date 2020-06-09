@@ -14,6 +14,7 @@ class Json {
     //usebility elements for that menu
     var id = [String]()
     var manufacturer = [String]()
+    var model = [String]()
     var type = [String]()
     var machinelocation = [String]()
     var images = [Data]()
@@ -45,13 +46,16 @@ class Json {
     }
     
     func addingInToArrays( _ jsonObject: [Dictionary<String, Any>]) {
-
+        
         for dict in jsonObject {
             if let id = dict["id"] {
                 self.id.append(String(id as! Int) )
             }
             if let manufacturer = dict["manufacturer"] {
                 self.manufacturer.append(manufacturer as! String)
+            }
+            if let type = dict["model"] {
+                self.model.append(type as! String)
             }
             if let type = dict["type"] {
                 self.type.append(type as! String)
@@ -69,22 +73,27 @@ class Json {
     
     func putingElementsInMenu () {
         let names = manufacturer
-        let imagesUrl = self.imageUrlArray
+        let imagesUrl = imageUrlArray
+        let oneModel = model
+        let oneType = type
+        let location = machinelocation
         let count = id.count - 1
         for index in 0...count{
+            //only for image - use Data type
             let data = fixImageFromUrl(imagesUrl[index])
-            menu.append(Menu(name: names[index], imageName: data)) 
+            
+            menu.append(Menu(name: names[index], image: data, model: oneModel[index], type: oneType[index], machinelocation: location[index]))
         }
     }
     
     //convert image URL Into Data elements
     func fixImageFromUrl( _ imageUrl: String) -> Data {
-                if let url = URL(string: imageUrl){
-                    if let data = try? Data(contentsOf: url) {
-                        return data
-                }
+        if let url = URL(string: imageUrl){
+            if let data = try? Data(contentsOf: url) {
+                return data
             }
-        return Data()
         }
+        return Data()
+    }
 }
 

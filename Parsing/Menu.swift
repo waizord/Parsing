@@ -10,5 +10,9 @@ import Foundation
 
 struct Menu {
     var name: String?
-    var imageName: Data?
+    var image: Data?
+    var manufacturer: String?
+    var model: String?
+    var type: String?
+    var machinelocation: String?
 }

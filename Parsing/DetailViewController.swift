@@ -12,20 +12,32 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
-            guard let image = menu?.imageName else {return}
+            guard let image = menu?.image else {return}
             imageView.image = UIImage(data: image)
         }
     }
     
-    @IBOutlet weak var nameLabel: UILabel! {
+    @IBOutlet weak var manufacturerLabel: UILabel! {
         didSet {
-            nameLabel.text = menu?.name
+            manufacturerLabel.text = menu?.name
         }
     }
     
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var machinelocationLabel: UILabel!
-    @IBOutlet weak var manufacturerLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel! {
+        didSet{
+            typeLabel.text = menu?.type
+        }
+    }
+    @IBOutlet weak var machinelocationLabel: UILabel! {
+        didSet {
+            machinelocationLabel.text = menu?.machinelocation
+        }
+    }
+    @IBOutlet weak var modelLabel: UILabel! {
+        didSet {
+            modelLabel.text = menu?.model
+        }
+    }
     
     var menu: Menu?
 

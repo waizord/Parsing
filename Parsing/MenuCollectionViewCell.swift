@@ -16,7 +16,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     var menu: Menu? {
         didSet {
             nameLabel.text = menu?.name
-            if let image = menu?.imageName {
+            if let image = menu?.image{
                 imageView.image = UIImage(data: image)
                 
             }
