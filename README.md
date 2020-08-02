@@ -29,3 +29,5 @@
 -использование Alamofire для работы с данными из сети
 
 -использование SDWebImage для взаимодействия с изображениями 
+
+https://drive.google.com/file/d/1YfPnhZ7nEThtp_T2Rim4WdxjuF01ObLO/view?usp=sharing
