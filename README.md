@@ -30,4 +30,10 @@
 
 -использование SDWebImage для взаимодействия с изображениями 
 
+Изображения функционала:
+
 https://drive.google.com/file/d/1YfPnhZ7nEThtp_T2Rim4WdxjuF01ObLO/view?usp=sharing
+
+https://drive.google.com/file/d/1zkoF3cF7krgHYupHBtF3Ca1NmC4YYqvZ/view?usp=sharing
+
+https://drive.google.com/file/d/1PuFNc-mhihSfBP26tMLm49g5bWuWCCv6/view?usp=sharing
