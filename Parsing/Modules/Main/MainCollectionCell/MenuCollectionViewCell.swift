@@ -2,7 +2,7 @@
 //  MenuCollectionViewCell.swift
 //  Parsing
 //
-//  Created by Indoril Nerevar on 6/5/20.
+//  Created by Ivan on 8/11/20.
 //  Copyright © 2020 Artem. All rights reserved.
 //
 
@@ -24,5 +24,3 @@ class MenuCollectionViewCell: UICollectionViewCell {
     }
     
 }
-
-

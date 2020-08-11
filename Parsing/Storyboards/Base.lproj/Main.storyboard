@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YUI-Hw-Gws">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YUI-Hw-Gws">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,13 +10,13 @@
         <!--Menu-->
         <scene sceneID="dEy-Re-Os2">
             <objects>
-                <viewController id="OQd-UH-YAi" customClass="ViewController" customModule="Parsing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OQd-UH-YAi" customClass="MainViewController" customModule="Parsing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bo5-jn-05c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFC-ui-MGm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t22-yY-YoM">
                                     <size key="itemSize" width="128" height="128"/>
@@ -27,7 +26,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="menuCell" id="JLd-qU-Lwu" customClass="MenuCollectionViewCell" customModule="Parsing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                        <rect key="frame" x="93" y="0.0" width="414" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EkI-kq-gHC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
@@ -85,14 +84,14 @@
             <objects>
                 <viewController id="7uB-ts-N2p" customClass="DetailViewController" customModule="Parsing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8O4-of-xsR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BHZ-vD-nBI">
-                                <rect key="frame" x="0.0" y="118" width="414" height="604"/>
+                                <rect key="frame" x="0.0" y="74" width="600" height="386"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="manufacturer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7h-fj-PVH">
-                                <rect key="frame" x="0.0" y="88" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="30"/>
                                 <color key="backgroundColor" red="0.38823529410000002" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Pjo-cx-98a"/>
@@ -102,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9A-dM-26C">
-                                <rect key="frame" x="20" y="752" width="414" height="30"/>
+                                <rect key="frame" x="20" y="490" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9My-2A-6IN"/>
                                 </constraints>
@@ -111,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="machinelocation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="296-TO-rJf">
-                                <rect key="frame" x="20" y="782" width="414" height="30"/>
+                                <rect key="frame" x="20" y="520" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lHP-iF-fER"/>
                                 </constraints>
@@ -120,7 +119,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yle-33-9EH">
-                                <rect key="frame" x="20" y="722" width="414" height="30"/>
+                                <rect key="frame" x="20" y="460" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rEp-Nh-Yk0"/>
                                 </constraints>

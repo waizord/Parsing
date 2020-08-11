@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Parsing
 //
 //  Created by Indoril Nerevar on 5/28/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     let json = Json()
     
     let identifire = "menuCell"
@@ -46,9 +46,9 @@ class ViewController: UIViewController {
     
 }
 
-// MARK: Extension
+// MARK: - Extension
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return json.menu.count
     }
