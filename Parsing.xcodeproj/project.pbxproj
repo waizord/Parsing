@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB24A7C24E2EF8C001941EF /* ServiceApi */ = {
+			isa = PBXGroup;
+			children = (
+				A44A4763248A81E90065E0E1 /* Json */,
+				2CB24A7D24E2F067001941EF /* Network */,
+			);
+			path = ServiceApi;
+			sourceTree = "<group>";
+		};
+		2CB24A7D24E2F067001941EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2CB24A7F24E2F18B001941EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A47FB0E3247F1FF7009ED792 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2CB24A8024E2F1B8001941EF /* Suport */ = {
+			isa = PBXGroup;
+			children = (
+				A47FB0E8247F1FF8009ED792 /* LaunchScreen.storyboard */,
+				A47FB0E6247F1FF8009ED792 /* Assets.xcassets */,
+				A47FB0EB247F1FF8009ED792 /* Info.plist */,
+			);
+			path = Suport;
+			sourceTree = "<group>";
+		};
+		2CB24A8124E2F258001941EF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A47FB0DD247F1FF7009ED792 /* AppDelegate.swift */,
+				A47FB0DF247F1FF7009ED792 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2CB24A8224E2F295001941EF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A44A475F248A4D010065E0E1 /* Menu.swift */,
+				A47FB0E1247F1FF7009ED792 /* ViewController.swift */,
+				A44A4764248B14410065E0E1 /* DetailViewController.swift */,
+				A44A475B248A3F700065E0E1 /* MenuCollectionViewCell.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		3DCA2E1DA0AF5867803331E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,17 +147,11 @@
 		A47FB0DC247F1FF7009ED792 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
-				A47FB0DD247F1FF7009ED792 /* AppDelegate.swift */,
-				A47FB0DF247F1FF7009ED792 /* SceneDelegate.swift */,
-				A47FB0E1247F1FF7009ED792 /* ViewController.swift */,
-				A44A4764248B14410065E0E1 /* DetailViewController.swift */,
-				A44A475B248A3F700065E0E1 /* MenuCollectionViewCell.swift */,
-				A44A475F248A4D010065E0E1 /* Menu.swift */,
-				A44A4763248A81E90065E0E1 /* Json */,
-				A47FB0E3247F1FF7009ED792 /* Main.storyboard */,
-				A47FB0E8247F1FF8009ED792 /* LaunchScreen.storyboard */,
-				A47FB0E6247F1FF8009ED792 /* Assets.xcassets */,
-				A47FB0EB247F1FF8009ED792 /* Info.plist */,
+				2CB24A8124E2F258001941EF /* AppDelegate */,
+				2CB24A7C24E2EF8C001941EF /* ServiceApi */,
+				2CB24A8224E2F295001941EF /* Modules */,
+				2CB24A7F24E2F18B001941EF /* Storyboards */,
+				2CB24A8024E2F1B8001941EF /* Suport */,
 			);
 			path = Parsing;
 			sourceTree = "<group>";
@@ -114,7 +162,6 @@
 				93FE8DECD7EA32A246484EF7 /* Pods-Parsing.debug.xcconfig */,
 				5323475DED2C16329992606F /* Pods-Parsing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -387,11 +434,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Parsing/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Parsing/Suport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.Parsing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -405,11 +454,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Parsing/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Parsing/Suport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.Parsing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
