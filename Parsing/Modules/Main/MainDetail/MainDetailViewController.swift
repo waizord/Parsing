@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  MainDetailViewController.swift
 //  Parsing
 //
 //  Created by Indoril Nerevar on 6/6/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class MainDetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet {

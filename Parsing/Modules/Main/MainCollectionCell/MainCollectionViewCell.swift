@@ -1,5 +1,5 @@
 //
-//  MenuCollectionViewCell.swift
+//  MainCollectionViewCell.swift
 //  Parsing
 //
 //  Created by Ivan on 8/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuCollectionViewCell: UICollectionViewCell {
+class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

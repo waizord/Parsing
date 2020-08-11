@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
     // to get elemets viewController -> detailViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVC" {
-            if let vc = segue.destination as? DetailViewController {
+            if let vc = segue.destination as? MainDetailViewController {
                 let menu = sender as? Menu
                 
                 // test print
@@ -55,12 +55,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifire, for: indexPath) as? MenuCollectionViewCell {
+        if let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifire, for: indexPath) as? MainCollectionViewCell {
             itemCell.menu = json.menu[indexPath.row]
             
             return itemCell
         }
-        return MenuCollectionViewCell()
+        return MainCollectionViewCell()
     }
     
     // choice size image

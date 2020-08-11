@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="360.86956521739131" y="-234.375"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Main Detail View Controller-->
         <scene sceneID="zqJ-J8-geS">
             <objects>
-                <viewController id="7uB-ts-N2p" customClass="DetailViewController" customModule="Parsing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7uB-ts-N2p" customClass="MainDetailViewController" customModule="Parsing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8O4-of-xsR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
