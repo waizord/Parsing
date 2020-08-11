@@ -103,9 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				2CB24A8324E30522001941EF /* Main */,
-				A44A475F248A4D010065E0E1 /* Menu.swift */,
-				A47FB0E1247F1FF7009ED792 /* MainViewController.swift */,
-				2CB24A8624E30617001941EF /* MainViewPresenter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -113,6 +110,9 @@
 		2CB24A8324E30522001941EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A44A475F248A4D010065E0E1 /* Menu.swift */,
+				A47FB0E1247F1FF7009ED792 /* MainViewController.swift */,
+				2CB24A8624E30617001941EF /* MainViewPresenter.swift */,
 				2CB24A8524E305BC001941EF /* MainCollectionCell */,
 				2CB24A8424E30558001941EF /* MainDetail */,
 			);
