@@ -7,7 +7,9 @@
 //
 
 import UIKit
+protocol MainViewControllerProtocol {
 
+}
 class MainViewController: UIViewController {
     let json = Json()
     

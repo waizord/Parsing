@@ -7,3 +7,30 @@
 //
 
 import Foundation
+protocol MainPresenterProtocol {
+    init(view: MainViewControllerProtocol)
+    
+    func getCountOfRow() -> Int
+    func configurateCell(_ cell: MainTableViewCellProtocol, index: IndexPath)
+    func pressCell(atIndex index: Int)
+}
+class MainViewPresenter: MainPresenterProtocol{
+    var view: MainViewControllerProtocol
+    
+    required init(view: MainViewControllerProtocol) {
+        self.view = view
+    }
+    
+    func getCountOfRow() -> Int {
+    return 1
+    }
+    func configurateCell(_ cell: MainTableViewCellProtocol, index: IndexPath) {
+        
+    }
+    
+    func pressCell(atIndex index: Int) {
+    
+    }
+    
+    
+}
