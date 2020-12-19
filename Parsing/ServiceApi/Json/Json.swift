@@ -36,6 +36,7 @@ class Json {
             
             //handle object
             //print(jsonObject)
+            print("I am JSON")
             self.addingInToArrays(jsonObject)
             self.putingElementsInMenu()
             

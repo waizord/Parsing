@@ -33,7 +33,7 @@ protocol MainTableViewCellProtocol {
     func displayImage(imageUrlString: String?)
     
 }
-class MainTableViewCell: UITableViewCell {
+class MainCollectionViewCell: UICollectionViewCell {
     
-    
+    var menu: Menu = Menu()
 }
